@@ -1,6 +1,6 @@
 {
   "name": "galamtv",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "This extension for Azot lets you to download content from the GalamTV streaming service.",
   "homepage": "https://galamtv.kz",
   "config": {
