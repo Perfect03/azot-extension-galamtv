@@ -1,12 +1,8 @@
 {
   "name": "galamtv",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "This extension for Azot lets you to download content from the GalamTV streaming service.",
   "homepage": "https://galamtv.kz",
-  "config": {
-    "title": "Galam TV",
-    "icon": "https://play-lh.googleusercontent.com/YMYWzyY3qZv6eauRfVAHTh1wLwgBt3AVTad7VwFL1xkaIuEmSugzl0lPHP27ntjAGAk=w480-h960-rw"
-  },
   "keywords": [
     "streaming-services"
   ],
@@ -14,21 +10,31 @@
     "name": "Perfect03"
   },
   "license": "MIT",
-  "main": "dist/main.js",
+  "main": "dist/main.cjs",
   "files": [
-    "dist"
+    "dist",
+    "manifest.json"
   ],
   "scripts": {
-    "dev": "azt dev",
-    "build": "esbuild main.js --bundle --platform=node --outfile=dist/main.js",
+    "dev": "azot dev",
+    "build": "azot build",
+    "manifest": "azot manifest",
     "test": "vitest"
   },
   "engines": {
-    "azot": ">=4.3.10"
+    "azot": ">=5.0.0-alpha.96"
+  },
+  "peerDependencies": {
+    "eme": "^0.2.2"
+  },
+  "peerDependenciesMeta": {
+    "eme": {
+      "optional": true
+    }
   },
   "devDependencies": {
-    "esbuild": "^0.25.11",
-    "vitest": "^4.0.18",
+    "azot": "^5.0.0-beta.8",
+    "vitest": "^5.1.0",
     "lifestream-api": "file:./lifestream-api"
   }
 }
